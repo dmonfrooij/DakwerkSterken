@@ -10,9 +10,17 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-white">
+    <section id="home" className="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+      {/* Achtergrond afbeelding voor kunststof dak */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5"
+        style={{
+          backgroundImage: 'url("https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1600")'
+        }}
+      ></div>
+      
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
           <div>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Specialist in{' '}
