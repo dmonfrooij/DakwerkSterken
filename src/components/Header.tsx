@@ -20,7 +20,7 @@ const Header = () => {
             <img 
               src="/1714796366235.jpg" 
               alt="DAKWERK STERKEN Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
             <div className="hidden lg:flex items-center space-x-6 text-sm text-gray-600">
               <div className="flex items-center space-x-2">

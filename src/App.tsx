@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Materials from './components/Materials';
 import Gallery from './components/Gallery';
 import Videos from './components/Videos';
 import Contact from './components/Contact';
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <Materials />
         <Gallery />
         <Videos />
         <Contact />
