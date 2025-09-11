@@ -13,7 +13,7 @@ const Hero = () => {
     <section id="home" className="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
       {/* Achtergrond afbeelding voor kunststof dak */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-21"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-16"
         style={{
           backgroundImage: 'url("https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1600")'
         }}
