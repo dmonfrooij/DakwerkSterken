@@ -13,7 +13,7 @@ const Hero = () => {
     <section id="home" className="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
       {/* Achtergrond afbeelding voor kunststof dak */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-Æ"
         style={{
           backgroundImage: 'url("https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1600")'
         }}
@@ -65,7 +65,7 @@ const Hero = () => {
           
           <div className="lg:text-right">
             <div className="bg-white p-8 rounded-2xl shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-1">Waarom Kunststof Daken?</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Waarom Kunststof Daken?</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1" />
