@@ -26,9 +26,9 @@ const Gallery = () => {
     },
     {
       id: 4,
-      title: "Garage Dakrenovatie",
+      title: "Dakrenovatie",
       description: "Volledige renovatie garagedak met EPDM rubber",
-      image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "src/photos/20250314_182547.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 5,
