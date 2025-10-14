@@ -87,7 +87,7 @@ const Services = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">✓ Lokaal & Betrouwbaar</h4>
-                  <p className="text-blue-100 text-sm">Gevestigd in Neede, actief in de regio</p>
+                  <p className="text-blue-100 text-sm">Gevestigd in Neede, actief heel Nederland</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">✓ Scherpe Prijzen</h4>
