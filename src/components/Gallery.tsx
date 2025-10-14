@@ -16,7 +16,7 @@ const Gallery = () => {
       id: 2,
       title: "Bedrijfshal Dakbedekking",
       description: "Grote industriële hal voorzien van TPO kunststof dakbedekking",
-      image: "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "src/photos/20250905_051929.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 3,
