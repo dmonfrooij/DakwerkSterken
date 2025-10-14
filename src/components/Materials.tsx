@@ -12,7 +12,8 @@ const Materials = () => {
         "Levensduur: 30+ jaar",
         "Reflectiewaarde: tot 85%",
         "Warmte gelast",
-        "Chemisch bestendig"
+        "Chemisch bestendig",
+        "UV bestendig"
       ],
       useCases: [
         "Commerciële gebouwen",
