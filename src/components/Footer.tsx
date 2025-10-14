@@ -8,11 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo en beschrijving */}
           <div className="lg:col-span-2">
-            <img 
-              src="/1714796366235.jpg" 
-              alt="DAKWERK STERKEN Logo" 
-              className="h-16 w-auto mb-4 brightness-0 invert"
-            />
+
             <p className="text-gray-400 mb-4 max-w-md">
               DAKWERK STERKEN is uw specialist voor kunststof dakbedekkingen in Neede en omgeving. 
               Met jarenlange ervaring leveren wij kwaliteit en betrouwbaarheid.
