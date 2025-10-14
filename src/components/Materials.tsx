@@ -24,7 +24,8 @@ const Materials = () => {
         "Hoge energie-efficiëntie",
         "Sterke lasnaden",
         "Licht van gewicht",
-        "Recycleerbaar"
+        "Recycleerbaar",
+        "Geen weekmakers"
       ]
     },
     {
