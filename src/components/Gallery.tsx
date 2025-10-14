@@ -27,7 +27,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      title: "Dakrenovatie",
+      title: "Garage dak",
       description: "Volledige renovatie garagedak met PVC",
       image: "/photos/20250314_182547.jpg?auto=compress&cs=tinysrgb&w=800"
     },
