@@ -12,7 +12,7 @@ const Services = () => {
     {
       icon: <Wrench className="h-8 w-8" />,
       title: "Dakreparaties",
-      description: "Snelle en effectieve reparaties aan bestaande kunststof daken.",
+      description: "Snelle en effectieve reparaties aan bestaande daken.",
       features: ["Lek reparaties", "Voegen vernieuwen", "Beschadigingen herstellen"]
     },
     {
@@ -25,7 +25,7 @@ const Services = () => {
       icon: <Zap className="h-8 w-8" />,
       title: "Dakisolatie",
       description: "Energiezuinige isolatieoplossingen gecombineerd met kunststof dakbedekking.",
-      features: ["PIR isolatie", "Warmtebruggen voorkomen", "Energie besparing"]
+      features: ["PIR isolatie", "Koudebruggen voorkomen", "Energie besparing"]
     },
     {
       icon: <Droplets className="h-8 w-8" />,
