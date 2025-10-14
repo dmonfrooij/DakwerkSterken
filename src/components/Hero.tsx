@@ -71,14 +71,14 @@ const Hero = () => {
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900 text-left">Duurzaam & Onderhoudsvrij</h4>
-                    <p className="text-gray-600 text-sm text-left">Kunststof daken gaan decennia mee zonder onderhoud met een bewezen duur van 40 jaar of langer</p>
+                    <p className="text-gray-600 text-sm text-left">Kunststof daken gaan decennia mee met een bewezen duur van 40 jaar of langer</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900 text-left">Weerbestendig</h4>
-                    <p className="text-gray-600 text-sm text-left">Bestand tegen alle weersomstandigheden</p>
+                    <p className="text-gray-600 text-sm text-left">Bestand tegen alle weersomstandigheden extreem goed bestand tegen UV straling</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
