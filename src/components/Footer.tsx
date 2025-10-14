@@ -90,8 +90,6 @@ const Footer = () => {
               © 2024 DAKWERK STERKEN. Alle rechten voorbehouden.
             </p>
             <div className="flex space-x-6 text-sm text-gray-400">
-              <span className="hover:text-white transition-colors cursor-pointer">Privacy</span>
-              <span className="hover:text-white transition-colors cursor-pointer">Algemene Voorwaarden</span>
               <span className="hover:text-white transition-colors cursor-pointer">Sitemap</span>
             </div>
           </div>
