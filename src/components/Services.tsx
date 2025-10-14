@@ -30,13 +30,13 @@ const Services = () => {
     {
       icon: <Droplets className="h-8 w-8" />,
       title: "Dakafwatering",
-      description: "Complete systemen voor optimale waterafvoer van uw kunststof dak.",
+      description: "Complete systemen voor optimale waterafvoer van uw dak.",
       features: ["Dakgoten systemen", "Hemelwaterafvoer", "Drainage oplossingen"]
     },
     {
       icon: <Sun className="h-8 w-8" />,
       title: "Zonnepanelen Montage",
-      description: "Professionele montage van zonnepanelen op kunststof daken.",
+      description: "Professionele montage van zonnepanelen.",
       features: ["Ballast systemen", "Dakdoorvoer vrij", "Optimale oriëntatie"]
     }
   ];
