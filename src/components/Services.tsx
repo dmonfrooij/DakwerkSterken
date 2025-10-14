@@ -7,7 +7,7 @@ const Services = () => {
       icon: <Home className="h-8 w-8" />,
       title: "Kunststof Dakbedekking",
       description: "Professionele installatie van hoogwaardige kunststof daken voor woningen en bedrijven.",
-      features: ["EPDM rubber", "TPO membranen", "PVC dakbedekking"]
+      features: ["TPO membranen", "PVC dakbedekking"]
     },
     {
       icon: <Wrench className="h-8 w-8" />,
