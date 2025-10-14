@@ -46,7 +46,7 @@ const Materials = () => {
         "Complexe dakvormen",
         "Daken met veel doorvoeren",
         "Restaurants en keukens",
-        "Chemische industrie".
+        "Chemische industrie",
         "Woning bouw"
       ],
       advantages: [
