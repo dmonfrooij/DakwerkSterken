@@ -62,7 +62,7 @@ const Footer = () => {
               </li>
               <li>
                 <span className="hover:text-white transition-colors cursor-pointer">
-                  EPDM Rubber Daken
+                  Zonnepanelen
                 </span>
               </li>
               <li>
