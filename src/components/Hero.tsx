@@ -64,8 +64,8 @@ const Hero = () => {
           </div>
           
           <div className="lg:text-right">
-            <div className="bg-white p-8 rounded-2xl shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Waarom Kiezen Voor Kunststof Daken? PVC en TPO</h3>
+            <div className="bg-white p-8 rounded-2xl shadow-xl text-left">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Waarom Kiezen Voor Een Kunststof Dak?</h3> 
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1" />
