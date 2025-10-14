@@ -37,7 +37,7 @@ const Services = () => {
       icon: <Sun className="h-8 w-8" />,
       title: "Zonnepanelen Montage",
       description: "Professionele montage van zonnepanelen.",
-      features: ["Ballast systemen", "Dakdoorvoer vrij", "Optimale oriëntatie"]
+      features: ["Ballast systemen", "Ballastvrije verankering", "Optimale oriëntatie"]
     }
   ];
 
