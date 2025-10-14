@@ -39,8 +39,8 @@ const Gallery = () => {
     {
       id: 6,
       title: "Plaatsing Zonnepanelen",
-      description: "Plaatsing zonnepanelen op een bestaand kunststof dak",
-      image: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800"
+      description: "Plaatsing zonnepanelen op een nieuw kunststof dak",
+      image: "src/photos/20240108_052445_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
     }
   ];
 
