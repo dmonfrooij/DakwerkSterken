@@ -10,7 +10,12 @@ const Videos = () => {
       description: "Bekijk hoe wij professioneel een kunststof dak installeren.",
       thumbnail: "src/photos/2025-10-14 144844.png?auto=compress&cs=tinysrgb&w=600"
     },
-
+    {
+      url: "https://www.youtube.com/watch?v=KBKBcIjNr38", // Placeholder - vervang door echte YouTube URL
+      title: "Het Begint Met Een Goede Start",
+      description: "Bekijk hoe wij professioneel een kunststof dak installeren.",
+      thumbnail: "src/photos/2025-10-14 144844.png?auto=compress&cs=tinysrgb&w=600"
+    },
   ];
 
   const openVideo = (url: string) => {
