@@ -38,9 +38,9 @@ const Gallery = () => {
     },
     {
       id: 6,
-      title: "Woning Dakreparatie",
+      title: "Plaatsing zonnepanelen op een nieuw PVC dak",
       description: "Lokale reparatie en versterking bestaand kunststof dak",
-      image: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "src/photos/20240108_052445_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
     }
   ];
 
