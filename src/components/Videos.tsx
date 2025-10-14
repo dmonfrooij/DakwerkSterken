@@ -7,27 +7,10 @@ const Videos = () => {
     {
       url: "https://www.youtube.com/watch?v=BVPaybXDJno", // Placeholder - vervang door echte YouTube URL
       title: "Kunststof Dak Installatie Process",
-      description: "Bekijk hoe wij professioneel een kunststof dak installeren van begin tot eind.",
+      description: "Bekijk hoe wij professioneel een kunststof dak installeren.",
       thumbnail: "src/photos/2025-10-14 144844.png?auto=compress&cs=tinysrgb&w=600"
     },
-    {
-      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Placeholder - vervang door echte YouTube URL
-      title: "EPDM Rubber Dakbedekking",
-      description: "Alles over de voordelen en installatie van EPDM rubber dakbedekkingen.",
-      thumbnail: "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Placeholder - vervang door echte YouTube URL
-      title: "Dakonderhoud Tips",
-      description: "Praktische tips voor het onderhoud van uw kunststof dak om de levensduur te verlengen.",
-      thumbnail: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Placeholder - vervang door echte YouTube URL
-      title: "Voor en Na Transformaties",
-      description: "Indrukwekkende transformaties van oude daken naar moderne kunststof oplossingen.",
-      thumbnail: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600"
-    }
+
   ];
 
   const openVideo = (url: string) => {
