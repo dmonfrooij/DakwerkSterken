@@ -83,7 +83,7 @@ const Videos = () => {
               
               <div className="aspect-video">
                 <iframe
-                  src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+                  src={`https://www.youtube-nocookie.com/embed/${selectedVideo}?autoplay=1`}
                   title="Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
