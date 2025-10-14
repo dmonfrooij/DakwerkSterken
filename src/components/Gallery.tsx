@@ -22,7 +22,7 @@ const Gallery = () => {
       id: 3,
       title: "Aanbouw Plat Dak",
       description: "Moderne aanbouw met hoogwaardige PVC dakbedekking",
-      image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "src/photos/20240108_052949_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 4,
