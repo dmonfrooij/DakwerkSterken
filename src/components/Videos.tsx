@@ -1,46 +1,36 @@
 import React, { useState } from 'react';
-import { Play, ExternalLink, X } from 'lucide-react';
+import { Play, ExternalLink } from 'lucide-react';
 
 const Videos = () => {
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
-
   // Placeholder YouTube video IDs - vervang deze door echte video IDs
   const videos = [
     {
-      id: "BVPaybXDJno", // Placeholder - vervang door echte YouTube video ID
-      url: "https://www.youtube.com/watch?v=BVPaybXDJno",
+      url: "https://www.youtube.com/watch?v=BVPaybXDJno", // Placeholder - vervang door echte YouTube URL
       title: "Kunststof Dak Installatie Process",
       description: "Bekijk hoe wij professioneel een kunststof dak installeren van begin tot eind.",
       thumbnail: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      id: "dQw4w9WgXcQ", // Placeholder - vervang door echte YouTube video ID
-      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Placeholder - vervang door echte YouTube URL
       title: "EPDM Rubber Dakbedekking",
       description: "Alles over de voordelen en installatie van EPDM rubber dakbedekkingen.",
       thumbnail: "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      id: "dQw4w9WgXcQ", // Placeholder - vervang door echte YouTube video ID
-      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Placeholder - vervang door echte YouTube URL
       title: "Dakonderhoud Tips",
       description: "Praktische tips voor het onderhoud van uw kunststof dak om de levensduur te verlengen.",
       thumbnail: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      id: "dQw4w9WgXcQ", // Placeholder - vervang door echte YouTube video ID
-      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Placeholder - vervang door echte YouTube URL
       title: "Voor en Na Transformaties",
       description: "Indrukwekkende transformaties van oude daken naar moderne kunststof oplossingen.",
       thumbnail: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ];
 
-  const openVideo = (videoId: string) => {
-    setSelectedVideo(videoId);
-  };
-
-  const openExternalVideo = (url: string) => {
+  const openVideo = (url: string) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
@@ -60,6 +50,7 @@ const Videos = () => {
             <div 
               key={index}
               className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => openVideo(video.url)}
             >
               <div className="aspect-video bg-gray-200 relative overflow-hidden">
                 <img 
@@ -67,12 +58,10 @@ const Videos = () => {
                   alt={video.title}
                   className="w-full h-full object-cover"
                 />
-                <div 
-                  className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center hover:bg-opacity-40 transition-all"
-                  onClick={() => openVideo(video.id)}
-                >
-                  <div className="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-all">
+                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center hover:bg-opacity-40 transition-all">
+                  <div className="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-all flex items-center space-x-2">
                     <Play className="h-6 w-6 text-blue-800" />
+                    <ExternalLink className="h-4 w-4 text-blue-800" />
                   </div>
                 </div>
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
@@ -82,21 +71,9 @@ const Videos = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{video.title}</h3>
                 <p className="text-gray-600 mb-3">{video.description}</p>
-                <div className="flex items-center justify-between">
-                  <button
-                    onClick={() => openVideo(video.id)}
-                    className="flex items-center text-blue-800 text-sm font-medium hover:text-blue-900"
-                  >
-                    <Play className="h-4 w-4 mr-1" />
-                    <span>Afspelen</span>
-                  </button>
-                  <button
-                    onClick={() => openExternalVideo(video.url)}
-                    className="flex items-center text-gray-600 text-sm hover:text-gray-800"
-                  >
-                    <ExternalLink className="h-4 w-4 mr-1" />
-                    <span>Op YouTube</span>
-                  </button>
+                <div className="flex items-center text-blue-800 text-sm font-medium">
+                  <ExternalLink className="h-4 w-4 mr-1" />
+                  <span>Bekijk op YouTube</span>
                 </div>
               </div>
             </div>
@@ -118,31 +95,6 @@ const Videos = () => {
           </a>
         </div>
       </div>
-
-      {/* Video Modal */}
-      {selectedVideo && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-          <div className="relative w-full max-w-4xl">
-            <button 
-              onClick={() => setSelectedVideo(null)}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 z-10"
-            >
-              <X className="h-8 w-8" />
-            </button>
-            
-            <div className="aspect-video bg-black rounded-lg overflow-hidden">
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${selectedVideo}?autoplay=1&rel=0&modestbranding=1`}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
