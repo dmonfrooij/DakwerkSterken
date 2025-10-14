@@ -10,7 +10,7 @@ const Gallery = () => {
       id: 1,
       title: "Kunststof Dak Woonhuis",
       description: "Complete vervanging traditioneel dak naar EPDM kunststof bedekking",
-      image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "src/photos/20250515_152128.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 2,
