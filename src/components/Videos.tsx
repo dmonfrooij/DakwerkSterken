@@ -71,10 +71,10 @@ const Videos = () => {
         <div className="mt-16 bg-blue-50 p-8 rounded-2xl text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Meer Video's Bekijken?</h3>
           <p className="text-gray-600 mb-6">
-            Bezoek ons YouTube kanaal voor meer tips, tutorials en projectoverzichten.
+            Bezoek ons YouTube kanaal voor meer tips en projectoverzichten.
           </p>
           <a 
-            href="https://www.youtube.com/@dakwerksterken" 
+            href="https://www.youtube.com/@leethatsme4491" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
