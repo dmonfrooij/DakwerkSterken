@@ -13,7 +13,7 @@ const Videos = () => {
     {
       url: "https://www.youtube.com/watch?v=KBKBcIjNr38", // Placeholder - vervang door echte YouTube URL
       title: "Het Begint Met Een Goede Start",
-      description: "Bekijk hoe wij professioneel een kunststof dak installeren.",
+      description: "Kwaliteit en snelheid is onze standaard",
       thumbnail: "src/photos/2025-10-14 144844.png?auto=compress&cs=tinysrgb&w=600"
     },
   ];
