@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
+
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
@@ -10,37 +11,37 @@ const Gallery = () => {
       id: 1,
       title: "Kunststof Dak Woonhuis",
       description: "Nieuwbouw PVC dakbedekking",
-      image: "src/photos/20250515_152128.jpg?auto=compress&cs=tinysrgb&w=800"
+      image: "/photos/20250515_152128.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 2,
       title: "Bedrijfshal Dakbedekking",
       description: "Grote industriële hal voorzien van TPO kunststof dakbedekking",
-      image: "src/photos/20250905_051929.jpg?auto=compress&cs=tinysrgb&w=800"
+      image: "/photos/20250905_051929.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 3,
       title: "Aanbouw Plat Dak",
       description: "Moderne aanbouw met hoogwaardige PVC dakbedekking",
-      image: "src/photos/20240108_052949_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
+      image: "/photos/20240108_052949_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 4,
       title: "Dakrenovatie",
       description: "Volledige renovatie garagedak met PVC",
-      image: "src/photos/20250314_182547.jpg?auto=compress&cs=tinysrgb&w=800"
+      image: "/photos/20250314_182547.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 5,
       title: "Kantoorgebouw Dak",
       description: "Energiezuinig kunststof dak met geïntegreerde isolatie",
-      image: "src/photos/20220317_163556.jpg?auto=compress&cs=tinysrgb&w=800"
+      image: "/photos/20220317_163556.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 6,
       title: "Plaatsing zonnepanelen op een nieuw PVC dak",
       description: "Lokale reparatie en versterking bestaand kunststof dak",
-      image: "src/photos/20240108_052445_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
+      image: "/photos/20240108_052445_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
     }
   ];
 
