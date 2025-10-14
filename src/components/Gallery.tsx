@@ -16,19 +16,19 @@ const Gallery = () => {
       id: 2,
       title: "Bedrijfshal Dakbedekking",
       description: "Grote industriële hal voorzien van TPO kunststof dakbedekking",
-      image: "src/photos/20250905_051929.jpg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 3,
       title: "Aanbouw Plat Dak",
       description: "Moderne aanbouw met hoogwaardige PVC dakbedekking",
-      image: "src/photos/20240108_052949_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 4,
-      title: "Dakrenovatie",
-      description: "Volledige renovatie met PVC over bitumen",
-      image: "src/photos/20250314_182547.jpg?auto=compress&cs=tinysrgb&w=800"
+      title: "Garage Dakrenovatie",
+      description: "Volledige renovatie garagedak met EPDM rubber",
+      image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 5,
@@ -38,9 +38,9 @@ const Gallery = () => {
     },
     {
       id: 6,
-      title: "Plaatsing Zonnepanelen",
-      description: "Plaatsing zonnepanelen op een nieuw kunststof dak",
-      image: "src/photos/20240108_052445_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
+      title: "Woning Dakreparatie",
+      description: "Lokale reparatie en versterking bestaand kunststof dak",
+      image: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ];
 
