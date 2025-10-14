@@ -27,7 +27,7 @@ const Gallery = () => {
     {
       id: 4,
       title: "Dakrenovatie",
-      description: "Volledige renovatie garagedak met EPDM rubber",
+      description: "Volledige renovatie met PVC over bitumen",
       image: "src/photos/20250314_182547.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
