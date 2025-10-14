@@ -8,7 +8,7 @@ const Videos = () => {
       url: "https://www.youtube.com/watch?v=BVPaybXDJno", // Placeholder - vervang door echte YouTube URL
       title: "Kunststof Dak Installatie Process",
       description: "Bekijk hoe wij professioneel een kunststof dak installeren.",
-      thumbnail: "public/photos/2025-10-14 144844.png?auto=compress&cs=tinysrgb&w=600"
+      thumbnail: "/photos/2025-10-14 144844.png?auto=compress&cs=tinysrgb&w=600"
     },
     {
       url: "https://www.youtube.com/watch?v=KBKBcIjNr38", // Placeholder - vervang door echte YouTube URL
