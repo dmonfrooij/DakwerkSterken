@@ -55,30 +55,6 @@ const Materials = () => {
         "Brandveilig",
         "Lange garantieperiode"
       ]
-    },
-    {
-      name: "Bitumen Modificaties",
-      icon: <Zap className="h-8 w-8" />,
-      description: "Gemodificeerd bitumen combineert traditionele betrouwbaarheid met moderne prestaties.",
-      color: "bg-orange-600",
-      specifications: [
-        "Levensduur: 20+ jaar",
-        "SBS of APP gemodificeerd",
-        "Zelfklevend beschikbaar",
-        "Hoge treksterkte"
-      ],
-      useCases: [
-        "Traditionele bouw",
-        "Renovatie oude daken",
-        "Hellende daken",
-        "Budget-vriendelijke projecten"
-      ],
-      advantages: [
-        "Bewezen technologie",
-        "Kosteneffectief",
-        "Eenvoudige verwerking",
-        "Breed toepasbaar"
-      ]
     }
   ];
 
