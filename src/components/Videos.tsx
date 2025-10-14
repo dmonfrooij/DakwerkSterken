@@ -7,7 +7,7 @@ const Videos = () => {
   // Placeholder YouTube video IDs - vervang deze door echte video IDs
   const videos = [
     {
-      id: "dQw4w9WgXcQ", // Placeholder - vervang door echte YouTube video ID
+      id: "BVPaybXDJno", // Placeholder - vervang door echte YouTube video ID
       title: "Kunststof Dak Installatie Process",
       description: "Bekijk hoe wij professioneel een kunststof dak installeren van begin tot eind.",
       thumbnail: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600"
