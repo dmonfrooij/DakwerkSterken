@@ -65,13 +65,13 @@ const Hero = () => {
           
           <div className="lg:text-right">
             <div className="bg-white p-8 rounded-2xl shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Waarom Kunststof Daken?</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Waarom Kiezen Voor Kunststof Daken? PVC en TPO</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900 text-left">Duurzaam & Onderhoudsvrij</h4>
-                    <p className="text-gray-600 text-sm text-left">Kunststof daken gaan decennia mee zonder onderhoud</p>
+                    <p className="text-gray-600 text-sm text-left">Kunststof daken gaan decennia mee zonder onderhoud met een bewezen duur van 40 jaar of langer</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
