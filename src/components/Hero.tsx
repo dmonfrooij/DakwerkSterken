@@ -34,7 +34,7 @@ const Hero = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-600" />
-                <span className="text-gray-700 font-medium">20+ jaar Ervaring</span>
+                <span className="text-gray-700 font-medium">20+ Jaar Ervaring</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Shield className="h-6 w-6 text-blue-600" />
