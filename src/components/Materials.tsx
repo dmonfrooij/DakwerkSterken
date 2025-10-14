@@ -18,7 +18,8 @@ const Materials = () => {
         "Commerciële gebouwen",
         "Industriële hallen",
         "Energiezuinige projecten",
-        "Grote oppervlaktes"
+        "Grote oppervlaktes",
+        "Woningbouw"
       ],
       advantages: [
         "Hoge energie-efficiëntie",
