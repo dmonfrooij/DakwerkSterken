@@ -34,7 +34,7 @@ const Gallery = () => {
       id: 5,
       title: "Kantoorgebouw Dak",
       description: "Energiezuinig kunststof dak met geïntegreerde isolatie",
-      image: "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "src/photos/20220317_163556.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 6,
