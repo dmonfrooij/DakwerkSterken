@@ -64,7 +64,7 @@ const Hero = () => {
           </div>
           
           <div className="lg:text-right">
-            <div className="bg-white p-8 rounded-2xl shadow-xl">
+            <div className="bg-white p-8 rounded-2xl shadow-xl text-left">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Waarom Kiezen Voor Een Kunststof Dak?</h3> 
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
