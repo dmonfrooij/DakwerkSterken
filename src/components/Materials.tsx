@@ -4,30 +4,6 @@ import { Shield, Droplets, Thermometer, Zap, CheckCircle, Star } from 'lucide-re
 const Materials = () => {
   const materials = [
     {
-      name: "EPDM Rubber",
-      icon: <Shield className="h-8 w-8" />,
-      description: "Ethyleen-propyleen-dieen-monomeer rubber is de meest populaire keuze voor platte daken.",
-      color: "bg-blue-600",
-      specifications: [
-        "Levensduur: 50+ jaar",
-        "Temperatuurbestendig: -40°C tot +150°C",
-        "UV-bestendig",
-        "Flexibel bij alle temperaturen"
-      ],
-      useCases: [
-        "Woonhuizen met plat dak",
-        "Garages en bijgebouwen",
-        "Renovatieprojecten",
-        "Daken met veel details"
-      ],
-      advantages: [
-        "Zeer duurzaam en betrouwbaar",
-        "Eenvoudig te repareren",
-        "Milieuvriendelijk",
-        "Kosteneffectief"
-      ]
-    },
-    {
       name: "TPO Membraan",
       icon: <Thermometer className="h-8 w-8" />,
       description: "Thermoplastisch polyolefine biedt uitstekende energie-efficiëntie en duurzaamheid.",
