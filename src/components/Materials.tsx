@@ -39,13 +39,15 @@ const Materials = () => {
         "Levensduur: 25+ jaar",
         "Brandvertragend",
         "Chemisch resistent",
-        "Flexibel bij lage temperaturen"
+        "Flexibel bij lage temperaturen",
+        "UV bestendig"
       ],
       useCases: [
         "Complexe dakvormen",
         "Daken met veel doorvoeren",
         "Restaurants en keukens",
-        "Chemische industrie"
+        "Chemische industrie".
+        "Woning bouw"
       ],
       advantages: [
         "Uitstekende verwerkbaarheid",
