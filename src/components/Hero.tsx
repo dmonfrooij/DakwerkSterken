@@ -13,9 +13,9 @@ const Hero = () => {
     <section id="home" className="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
       {/* Achtergrond afbeelding voor kunststof dak */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-45"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
         style={{
-          backgroundImage: 'url("/photos/20210914_072621.jpg?auto=compress&cs=tinysrgb&w=1600")'
+          backgroundImage: 'url("/photos/20902384.png?auto=compress&cs=tinysrgb&w=1600")'
         }}
       ></div>
       
@@ -26,7 +26,7 @@ const Hero = () => {
               Specialist in{' '}
               <span className="text-blue-800">Kunststof Daken</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-black-600 mb-8 leading-relaxed">
               DAKWERK STERKEN is uw betrouwbare partner voor hoogwaardige dakwerkzaamheden. 
               Gespecialiseerd in kunststof daken bieden wij duurzame oplossingen voor uw woning of bedrijf.
             </p>
