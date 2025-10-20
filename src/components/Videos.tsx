@@ -26,10 +26,9 @@ const Videos = () => {
     <section id="videos" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Video's & Tutorials</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Video's </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Bekijk onze video's om meer te leren over kunststof daken, installatieprocessen 
-            en onderhoudstips van onze experts.
+            Bekijk onze video's om meer te leren over kunststof daken en installatieprocessen.
           </p>
         </div>
 
