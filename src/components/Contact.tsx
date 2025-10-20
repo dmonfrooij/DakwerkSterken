@@ -14,7 +14,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-1 gap-12">
           {/* Contact Informatie */}
           <div>
             <div className="bg-white p-8 rounded-2xl shadow-lg mb-8">
@@ -111,9 +111,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Formulier */}
-          <div>
-            <ContactForm />
-          </div>
+
         </div>
       </div>
     </section>
