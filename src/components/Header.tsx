@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import React, { useState } from "react";
+import { Menu, X, Phone, Mail } from "lucide-react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
+  // ✅ Altijd werkende scrollfunctie (werkt ook vanaf /projecten)
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== "/") {
+      // Eerst naar homepagina navigeren
+      navigate("/", { replace: false });
+      // Kleine delay om DOM te laten laden
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 400);
+    } else {
+      // Al op homepagina → direct scrollen
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
+
     setIsMenuOpen(false);
   };
 
@@ -16,12 +34,16 @@ const Header = () => {
     <header className="bg-white shadow-lg fixed w-full top-0 z-50">
       <div className="bg-white px-4 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
+          {/* Logo + contactinfo */}
           <div className="flex items-center space-x-8">
-            <img 
-              src="/1714796366235.jpg" 
-              alt="DAKWERK STERKEN Logo" 
-              className="h-20 w-auto"
-            />
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              <img
+                src="/1714796366235.jpg"
+                alt="DAKWERK STERKEN Logo"
+                className="h-20 w-auto"
+              />
+            </Link>
+
             <div className="hidden lg:flex items-center space-x-6 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-blue-800" />
@@ -36,41 +58,56 @@ const Header = () => {
               </div>
             </div>
           </div>
-          
+
+          {/* Desktop navigatie */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')}
+            <button
+              onClick={() => scrollToSection("home")}
               className="text-gray-700 hover:text-blue-800 font-medium transition-colors"
             >
               Home
             </button>
-            <button 
-              onClick={() => scrollToSection('services')}
+            <button
+              onClick={() => scrollToSection("services")}
               className="text-gray-700 hover:text-blue-800 font-medium transition-colors"
             >
               Diensten
             </button>
-            <button 
-              onClick={() => scrollToSection('gallery')}
+            <button
+              onClick={() => scrollToSection("gallery")}
               className="text-gray-700 hover:text-blue-800 font-medium transition-colors"
             >
               Voorbeelden
             </button>
-            <button 
-              onClick={() => scrollToSection('videos')}
+            <button
+              onClick={() => scrollToSection("videos")}
               className="text-gray-700 hover:text-blue-800 font-medium transition-colors"
             >
               Video's
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
+
+            <Link
+              to="/projecten"
+              className={`font-medium transition-colors ${
+                location.pathname === "/projecten"
+                  ? "text-blue-800"
+                  : "text-gray-700 hover:text-blue-800"
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Projecten
+            </Link>
+
+            <button
+              onClick={() => scrollToSection("contact")}
               className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors"
             >
               Contact
             </button>
           </nav>
 
-          <button 
+          {/* Mobile toggle */}
+          <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -91,33 +128,47 @@ const Header = () => {
                 <span>info@dakwerksterken.nl</span>
               </div>
             </div>
+
             <nav className="flex flex-col space-y-4 pt-4">
-              <button 
-                onClick={() => scrollToSection('home')}
+              <button
+                onClick={() => scrollToSection("home")}
                 className="text-gray-700 hover:text-blue-800 font-medium text-left"
               >
                 Home
               </button>
-              <button 
-                onClick={() => scrollToSection('services')}
+              <button
+                onClick={() => scrollToSection("services")}
                 className="text-gray-700 hover:text-blue-800 font-medium text-left"
               >
                 Diensten
               </button>
-              <button 
-                onClick={() => scrollToSection('gallery')}
+              <button
+                onClick={() => scrollToSection("gallery")}
                 className="text-gray-700 hover:text-blue-800 font-medium text-left"
               >
                 Voorbeelden
               </button>
-              <button 
-                onClick={() => scrollToSection('videos')}
+              <button
+                onClick={() => scrollToSection("videos")}
                 className="text-gray-700 hover:text-blue-800 font-medium text-left"
               >
                 Video's
               </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
+
+              <Link
+                to="/projecten"
+                className={`font-medium text-left ${
+                  location.pathname === "/projecten"
+                    ? "text-blue-800"
+                    : "text-gray-700 hover:text-blue-800"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Projecten
+              </Link>
+
+              <button
+                onClick={() => scrollToSection("contact")}
                 className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors w-fit"
               >
                 Contact
