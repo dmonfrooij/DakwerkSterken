@@ -18,15 +18,18 @@ app.post("/api/send-mail", async (req, res) => {
 
   try {
     // ✉️ Transporter configureren (gebruik SMTP van bijv. Gmail of je domein)
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
-      secure: process.env.SMTP_SECURE === "true",
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT,
+  secure: process.env.SMTP_SECURE === "true", // false voor TLS
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false, // ← laat self-signed certificaten toe
+  },
+});
 
     // 📨 E-mail verzenden
 await transporter.sendMail({
