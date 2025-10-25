@@ -20,14 +20,14 @@ app.post("/api/send-mail", async (req, res) => {
     // ✉️ Transporter configureren (gebruik SMTP van bijv. Gmail of je domein)
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
-  port: process.env.SMTP_PORT,
-  secure: process.env.SMTP_SECURE === "true", // false voor TLS
+  port: Number(process.env.SMTP_PORT),
+  secure: process.env.SMTP_SECURE === "true", // true = SSL (poort 465)
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
   tls: {
-    rejectUnauthorized: false, // ← laat self-signed certificaten toe
+    rejectUnauthorized: false, // voorkom SSL-cert-problemen
   },
 });
 
