@@ -1,158 +1,120 @@
-import React, { useState } from 'react';
-import { Send, CheckCircle } from 'lucide-react';
+import React, { useState } from "react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  // 🧠 Handelt invoerupdates af
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // ✉️ Verzendt formulierdata naar jouw Express-server
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Hier zou normaal een API call naar de server komen
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    
-    // Reset form na 3 seconden
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
+    setStatus("sending");
+
+    try {
+      const res = await fetch("http://localhost:5000/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      if (!res.ok) throw new Error("Serverfout");
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("Fout bij verzenden:", err);
+      setStatus("error");
+    }
   };
 
-  if (isSubmitted) {
-    return (
-      <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-        <CheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">Bedankt voor uw bericht!</h3>
-        <p className="text-gray-600">
-          Wij nemen zo spoedig mogelijk contact met u op.
-        </p>
-      </div>
-    );
-  }
-
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg">
-      <h3 className="text-2xl font-bold text-gray-900 mb-6">Vraag een Offerte Aan</h3>
-      
-      <div className="grid md:grid-cols-2 gap-6 mb-6">
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-            Naam *
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-            placeholder="Uw volledige naam"
-          />
-        </div>
-        
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-            E-mail *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-            placeholder="uw.email@voorbeeld.nl"
-          />
-        </div>
+    <form
+      onSubmit={handleSubmit}
+      className="bg-white p-8 rounded-2xl shadow-lg"
+    >
+      <h3 className="text-2xl font-bold text-gray-900 mb-6">
+        Stuur een bericht
+      </h3>
+
+      <div className="mb-4">
+        <label className="block text-gray-700 mb-2" htmlFor="name">
+          Naam
+        </label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+          placeholder="Uw naam"
+        />
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 mb-6">
-        <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-            Telefoonnummer
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-            placeholder="06 - 12345678"
-          />
-        </div>
-        
-        <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-            Onderwerp *
-          </label>
-          <select
-            id="subject"
-            name="subject"
-            required
-            value={formData.subject}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-          >
-            <option value="">Selecteer onderwerp</option>
-            <option value="offerte">Offerte aanvraag</option>
-            <option value="reparatie">Dakreparatie</option>
-            <option value="onderhoud">Dakonderhoud</option>
-            <option value="nieuwbouw">Nieuwbouw project</option>
-            <option value="informatie">Algemene informatie</option>
-            <option value="anders">Anders</option>
-          </select>
-        </div>
+      <div className="mb-4">
+        <label className="block text-gray-700 mb-2" htmlFor="email">
+          E-mail
+        </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+          placeholder="Uw e-mailadres"
+        />
       </div>
 
       <div className="mb-6">
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-          Bericht *
+        <label className="block text-gray-700 mb-2" htmlFor="message">
+          Bericht
         </label>
         <textarea
           id="message"
           name="message"
-          required
-          rows={5}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-vertical"
-          placeholder="Beschrijf uw project of vraag in detail..."
+          required
+          rows={5}
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+          placeholder="Uw bericht..."
         ></textarea>
       </div>
 
       <button
         type="submit"
-        className="w-full bg-blue-800 text-white py-4 px-6 rounded-lg hover:bg-blue-900 transition-colors font-medium flex items-center justify-center space-x-2"
+        disabled={status === "sending"}
+        className={`w-full bg-blue-800 text-white py-3 rounded-lg font-semibold hover:bg-blue-900 transition-colors ${
+          status === "sending" ? "opacity-70 cursor-not-allowed" : ""
+        }`}
       >
-        <span>Verstuur Bericht</span>
-        <Send className="h-5 w-5" />
+        {status === "sending" ? "Verzenden..." : "Verstuur Bericht"}
       </button>
-      
-      <p className="text-sm text-gray-600 mt-4 text-center">
-        * Verplichte velden. Wij behandelen uw gegevens vertrouwelijk.
-      </p>
+
+      {status === "success" && (
+        <p className="text-green-600 mt-4">
+          ✅ Uw bericht is succesvol verzonden!
+        </p>
+      )}
+      {status === "error" && (
+        <p className="text-red-600 mt-4">
+          ❌ Er ging iets mis bij het verzenden. Probeer het opnieuw.
+        </p>
+      )}
     </form>
   );
 };
