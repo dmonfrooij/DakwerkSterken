@@ -28,7 +28,7 @@ const Hero = () => {
             </h1>
             <p className="text-xl text-black-600 mb-8 leading-relaxed">
               DAKWERK STERKEN is uw betrouwbare partner voor hoogwaardige dakwerkzaamheden. 
-              Gespecialiseerd in kunststof daken bieden wij duurzame oplossingen voor uw woning of bedrijf.
+              Gespecialiseerd in kunststof daken wij bieden duurzame oplossingen voor uw woning of bedrijf.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
