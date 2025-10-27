@@ -54,7 +54,7 @@ const Header = () => {
                 <span>info@dakwerksterken.nl</span>
               </div>
               <div className="text-blue-800 font-medium">
-                Specialist in kunststof daken
+                Sterk in vakwerk, Sterk in resultaat!
               </div>
             </div>
           </div>
