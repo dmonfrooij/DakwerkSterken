@@ -3,39 +3,39 @@ import React from "react";
 const projects = [
     {
       id: 1,
-      title: "Kunststof Dak Woonhuis",
+      title: "Nieuwbouw PVC",
       description: "Nieuwbouw PVC dakbedekking",
-      image: "/photos/20250515_152128.jpg?auto=compress&cs=tinysrgb&w=800"
+      image: "/photos/Nieuwbouw PVC.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 2,
-      title: "Bedrijfshal Dakbedekking",
-      description: "Grote industriële hal voorzien van TPO kunststof dakbedekking",
-      image: "/photos/20250905_051929.jpg?auto=compress&cs=tinysrgb&w=800"
+      title: "Nieuwbouw TPO",
+      description: "Nieuwbouw voorzien van TPO kunststof dakbedekking",
+      image: "/photos/Nieuwbouw_TPO.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 3,
-      title: "Aanbouw Plat Dak",
-      description: "Moderne aanbouw met hoogwaardige PVC dakbedekking",
-      image: "/photos/20240108_052949_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
+      title: "PVC Dak Hengelo",
+      description: "PVC Dak in Hengelo",
+      image: "/photos/Pvc_hengelo.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 4,
-      title: "Complete renovatie",
-      description: "Volledige renovatie met PVC",
-      image: "/photos/20250314_182547.jpg?auto=compress&cs=tinysrgb&w=800"
+      title: "Renovatie",
+      description: "Renovatie isolatie over het bestaande bitumen. Daaroverheen PVC",
+      image: "/photos/renovatie.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 5,
-      title: "Kantoorgebouw Dak",
-      description: "Energiezuinig kunststof dak met geïntegreerde isolatie",
-      image: "/photos/20220317_163556.jpg?auto=compress&cs=tinysrgb&w=800"
+      title: "Hellend dak",
+      description: "Hellend dak met TPO",
+      image: "/photos/hellend.jpg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 6,
-      title: "Plaatsing zonnepanelen op een nieuw PVC dak",
-      description: "Lokale reparatie en versterking bestaand kunststof dak",
-      image: "/photos/20240108_052445_Gallery.jpg?auto=compress&cs=tinysrgb&w=800"
+      title: "Plat dak woonhuis",
+      description: "Plat dak woonhuis met PVC",
+      image: "/photos/pvcwoonhuis.jpg?auto=compress&cs=tinysrgb&w=800"
     }
 ];
 
