@@ -14,9 +14,7 @@ export default function Reviews() {
   return (
     <section id="reviews" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Wat Onze Klanten Zeggen
-        </h2>
+
         <p className="text-gray-600 mb-10">
           Onze klanten beoordelen <span className="font-semibold text-primary">DAKWERK STERKEN</span> met trots dankzij kwaliteit, betrouwbaarheid en service.
         </p>
