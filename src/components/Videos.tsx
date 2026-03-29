@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Play, ExternalLink } from 'lucide-react';
 
 const Videos = () => {
@@ -23,11 +23,11 @@ const Videos = () => {
   };
 
   return (
-    <section id="videos" className="py-16 bg-white">
+    <section id="videos" className="section-shell bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Video's </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <div className="section-header">
+          <h2 className="section-title">Video's</h2>
+          <p className="section-lead">
             Bekijk onze video's om meer te leren over kunststof daken en installatieprocessen.
           </p>
         </div>
@@ -36,7 +36,7 @@ const Videos = () => {
           {videos.map((video, index) => (
             <div 
               key={index}
-              className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+              className="pro-card bg-gray-50 overflow-hidden cursor-pointer"
               onClick={() => openVideo(video.url)}
             >
               <div className="aspect-video bg-gray-200 relative overflow-hidden">

@@ -54,12 +54,12 @@ const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="py-16 bg-gray-50">
+    <section id="gallery" className="section-shell bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Onze Projecten</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Bekijk enkele voorbeelden van onze kunststof dakprojecten. Elk project wordt uitgevoerd 
+        <div className="section-header">
+          <h2 className="section-title">Onze Projecten</h2>
+          <p className="section-lead">
+            Bekijk enkele voorbeelden van onze kunststof dakprojecten. Elk project wordt uitgevoerd
             met de hoogste kwaliteitsstandaarden en aandacht voor detail.
           </p>
         </div>
@@ -68,24 +68,22 @@ const Gallery = () => {
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+              className="pro-card overflow-hidden cursor-pointer group hover:-translate-y-1"
               onClick={() => setSelectedImage(index)}
             >
               <div className="aspect-video bg-gray-200 relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                  <div className="text-white opacity-0 hover:opacity-100 transition-opacity">
-                    <span className="text-sm font-medium">Klik voor volledige weergave</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent flex items-end p-4">
+                  <div className="text-white">
+                    <h3 className="text-base font-semibold">{project.title}</h3>
+                    <p className="text-sm text-gray-100">{project.description}</p>
+                    <span className="inline-block mt-2 text-xs font-medium text-orange-200">Klik voor volledige weergave</span>
                   </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 text-sm">{project.description}</p>
               </div>
             </div>
           ))}

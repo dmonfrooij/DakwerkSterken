@@ -3,9 +3,12 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Projects from "./components/Projects";
+import SeoLandingPage from "./components/SeoLandingPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import WhatsAppButton from "./components/WhatsAppButton";
+import MobileCtaBar from "./components/MobileCtaBar";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -20,8 +23,12 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/projecten" element={<Projects />} />
+        <Route path="/diensten/:slug" element={<SeoLandingPage mode="services" />} />
+        <Route path="/regios/:slug" element={<SeoLandingPage mode="regions" />} />
       </Routes>
       <Footer />
+      <WhatsAppButton />
+      <MobileCtaBar />
     </BrowserRouter>
   </React.StrictMode>
 );

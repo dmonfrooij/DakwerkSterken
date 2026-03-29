@@ -4,15 +4,15 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section id="contact" className="section-shell bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Titel en Intro */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+        <div className="section-header mb-16">
+          <h2 className="section-title text-4xl md:text-5xl">
             Contact & Offerte
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Klaar voor uw kunststof dakproject? Neem contact met ons op voor een vrijblijvende offerte en professioneel advies.
+          <p className="section-lead max-w-2xl leading-relaxed">
+            Klaar voor uw kunststof dakproject? Neem direct contact met ons op voor een vrijblijvende offerte en professioneel advies.
           </p>
         </div>
 
@@ -20,7 +20,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="bg-white p-10 rounded-3xl shadow-md hover:shadow-xl transition">
+            <div className="pro-card p-10 rounded-3xl">
               <h3 className="text-2xl font-semibold text-gray-900 mb-8">
                 Onze Gegevens
               </h3>
@@ -124,7 +124,10 @@ const Contact = () => {
           </div>
 
           {/* Contactformulier */}
-          <div className="bg-white p-10 rounded-3xl shadow-md hover:shadow-xl transition">
+          <div className="pro-card p-10 rounded-3xl">
+            <div className="mb-6 rounded-xl bg-blue-50 border border-blue-100 p-4 text-sm text-blue-900">
+              Vrijblijvend advies, snelle reactie en duidelijke prijsopgave zonder verrassingen.
+            </div>
             <ContactForm />
           </div>
         </div>

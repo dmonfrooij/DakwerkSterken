@@ -42,19 +42,19 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 bg-white">
+    <section id="services" className="section-shell bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Onze Diensten</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Als specialist in kunststof daken bieden wij een compleet pakket aan diensten 
+        <div className="section-header">
+          <h2 className="section-title">Onze Diensten</h2>
+          <p className="section-lead">
+            Als specialist in kunststof daken bieden wij een compleet pakket aan diensten
             voor zowel particulieren als bedrijven.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+            <div key={index} className="pro-card bg-gray-50 p-8">
               <div className="text-blue-800 mb-4">
                 {service.icon}
               </div>

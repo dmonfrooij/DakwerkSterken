@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/api/send-mail", async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, phone, email, message } = req.body;
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: "Alle velden zijn verplicht." });
@@ -39,6 +39,7 @@ await transporter.sendMail({
   subject: `Nieuw bericht via contactformulier van ${name}`,
   html: `
     <h3>Nieuw bericht van ${name}</h3>
+    ${phone ? `<p><strong>Telefoon:</strong> ${phone}</p>` : ""}
     <p><strong>Email:</strong> ${email}</p>
     <p><strong>Bericht:</strong></p>
     <p>${message}</p>
