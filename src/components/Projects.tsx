@@ -40,13 +40,13 @@ const projects = [
 ];
 
 const Projects = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="section-shell bg-gray-50">
       <div className="bg-gray-50 min-h-screen pt-28">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center">
+          <h2 className="section-title text-center mb-10">
             Onze Projecten
           </h2>
 
@@ -54,19 +54,21 @@ const Projects = () => {
             {projects.map((p, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition cursor-pointer"
+                className="pro-card overflow-hidden cursor-pointer group hover:-translate-y-1"
                 onClick={() => setSelectedImage(p.image)}
               >
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full h-56 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-blue-800 mb-2">
-                    {p.title}
-                  </h3>
-                  <p className="text-gray-600">{p.description}</p>
+                <div className="relative">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-4">
+                    <div className="text-white">
+                      <h3 className="text-lg font-semibold mb-1">{p.title}</h3>
+                      <p className="text-sm text-gray-100">{p.description}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

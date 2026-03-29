@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { trackEvent } from "../utils/analytics";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
+    phone: "",
     email: "",
     message: "",
   });
@@ -17,6 +19,7 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
+    trackEvent("contact_form_submit", { status: "started" });
 
     try {
       const response = await fetch("/api/send-mail", {
@@ -27,12 +30,14 @@ const ContactForm = () => {
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
+        trackEvent("contact_form_submit", { status: "success" });
+        setFormData({ name: "", phone: "", email: "", message: "" });
       } else {
         throw new Error("E-mail verzenden mislukt");
       }
     } catch (error) {
       console.error(error);
+      trackEvent("contact_form_submit", { status: "error" });
       setStatus("error");
     }
   };
@@ -45,6 +50,9 @@ const ContactForm = () => {
       <h3 className="text-2xl font-semibold text-gray-900 mb-6">
         Stuur een bericht
       </h3>
+      <p className="text-sm text-gray-600 -mt-4 mb-4">
+        We reageren meestal binnen 24 uur.
+      </p>
 
       {/* Naam veld */}
       <div className="relative">
@@ -63,6 +71,25 @@ const ContactForm = () => {
           className="absolute text-gray-500 left-4 top-3 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-800"
         >
           Naam
+        </label>
+      </div>
+
+      {/* E-mail veld */}
+      <div className="relative">
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          className="peer w-full border border-gray-300 rounded-lg px-4 pt-5 pb-2 focus:outline-none focus:border-blue-800 transition"
+          placeholder=" "
+        />
+        <label
+          htmlFor="phone"
+          className="absolute text-gray-500 left-4 top-3 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-800"
+        >
+          Telefoonnummer (optioneel)
         </label>
       </div>
 
@@ -109,7 +136,7 @@ const ContactForm = () => {
       {/* Statusmelding */}
       {status === "success" && (
         <p className="text-green-600 text-sm font-medium">
-          ✅ Bericht succesvol verzonden!
+          Bericht succesvol verzonden! We nemen zo snel mogelijk contact op.
         </p>
       )}
       {status === "error" && (

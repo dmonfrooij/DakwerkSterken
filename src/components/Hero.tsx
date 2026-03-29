@@ -1,8 +1,10 @@
 import React from 'react';
 import { ArrowRight, Shield, Award, CheckCircle } from 'lucide-react';
+import { trackEvent } from '../utils/analytics';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
+    trackEvent('hero_cta_click', { cta_type: 'scroll', section_id: sectionId });
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -27,8 +29,8 @@ const Hero = () => {
               <span className="text-blue-800">Kunststof Daken</span>
             </h1>
             <p className="text-xl text-black-600 mb-8 leading-relaxed">
-              DAKWERK STERKEN is uw betrouwbare partner voor hoogwaardige dakwerkzaamheden. 
-              Gespecialiseerd in kunststof daken. Wij bieden duurzame oplossingen voor uw woning of bedrijf.
+              Dakwerk Sterken levert duurzame kunststof dakoplossingen voor woning en bedrijf.
+              Vraag vandaag nog een vrijblijvende offerte aan en ontvang snel persoonlijk advies.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -45,7 +47,11 @@ const Hero = () => {
                 <span className="text-gray-700 font-medium">Gecertificeerd</span>
               </div>
             </div>
-            
+
+            <p className="text-sm text-gray-700 mb-6 font-medium">
+              Reactie binnen 24 uur - Vrijblijvende offerte - Actief in heel Nederland
+            </p>
+
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => scrollToSection('contact')}
@@ -54,7 +60,14 @@ const Hero = () => {
                 <span>Vraag Offerte Aan</span>
                 <ArrowRight className="h-5 w-5" />
               </button>
-              <button 
+              <a
+                href="tel:0613027782"
+                onClick={() => trackEvent('hero_cta_click', { cta_type: 'phone' })}
+                className="bg-orange-500 text-white px-8 py-4 rounded-lg hover:bg-orange-600 transition-colors font-medium text-center"
+              >
+                Bel direct
+              </a>
+              <button
                 onClick={() => scrollToSection('services')}
                 className="border-2 border-blue-800 text-blue-800 px-8 py-4 rounded-lg hover:bg-blue-800 hover:text-white transition-colors font-medium"
               >

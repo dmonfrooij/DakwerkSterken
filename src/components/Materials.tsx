@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Droplets, Thermometer, Zap, CheckCircle, Star } from 'lucide-react';
+import { Droplets, Thermometer, CheckCircle, Star } from 'lucide-react';
 
 const Materials = () => {
   const materials = [
@@ -59,7 +59,7 @@ const Materials = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50 relative overflow-hidden">
+    <section className="section-shell bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50 relative overflow-hidden">
       {/* Bewegende achtergrond elementen */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-100 rounded-full opacity-20 animate-pulse"></div>
@@ -68,17 +68,17 @@ const Materials = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Kunststof Dakbedekkingen</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Wij werken uitsluitend met hoogwaardige kunststof materialen. Elk materiaal heeft zijn eigen 
+        <div className="section-header">
+          <h2 className="section-title">Kunststof Dakbedekkingen</h2>
+          <p className="section-lead">
+            Wij werken uitsluitend met hoogwaardige kunststof materialen. Elk materiaal heeft zijn eigen
             unieke eigenschappen en toepassingsgebieden. Ontdek welke oplossing het beste bij uw project past.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
           {materials.map((material, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div key={index} className="pro-card overflow-hidden hover:-translate-y-1">
               <div className={`${material.color} p-6 text-white`}>
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="bg-white bg-opacity-20 p-3 rounded-lg">
