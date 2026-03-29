@@ -12,7 +12,7 @@ const Contact = () => {
             Contact & Offerte
           </h2>
           <p className="section-lead max-w-2xl leading-relaxed">
-            Klaar voor uw kunststof dakproject? Neem contact met ons op voor een vrijblijvende offerte en professioneel advies.
+            Klaar voor uw kunststof dakproject? Neem direct contact met ons op voor een vrijblijvende offerte en professioneel advies.
           </p>
         </div>
 
