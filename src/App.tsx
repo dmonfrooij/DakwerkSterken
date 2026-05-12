@@ -11,7 +11,7 @@ import Reviews from "./components/Reviews";
 
 function App() {
   return (
-    <div className="bg-gray-50 min-h-screen pt-28">
+    <div className="bg-gray-50 dark:bg-gray-900 min-h-screen pt-28">
       <div className="min-h-screen">
         <main className="pb-16 md:pb-0">
           <Hero />

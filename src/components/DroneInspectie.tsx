@@ -64,7 +64,7 @@ const DroneInspectie = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen pt-28">
+    <div className="bg-gray-50 dark:bg-gray-900 min-h-screen pt-28">
       {/* ── Hero ── */}
       <section className="relative bg-blue-900 text-white overflow-hidden">
         <div className="absolute inset-0">
@@ -137,7 +137,7 @@ const DroneInspectie = () => {
       </section>
 
       {/* ── Voordelen ── */}
-      <section className="section-shell bg-white">
+      <section className="section-shell bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="section-header">
             <h2 className="section-title">Waarom een Drone Inspectie?</h2>
@@ -150,11 +150,11 @@ const DroneInspectie = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {voordelen.map((v, i) => (
               <div key={i} className="pro-card p-8 flex flex-col gap-4">
-                <div className="bg-blue-100 text-blue-800 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
+                <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
                   {v.icon}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">{v.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{v.desc}</p>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white">{v.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -162,7 +162,7 @@ const DroneInspectie = () => {
       </section>
 
       {/* ── Werkwijze ── */}
-      <section className="section-shell bg-gray-50">
+      <section className="section-shell bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-6">
           <div className="section-header">
             <h2 className="section-title">Zo Werkt Het</h2>
@@ -175,12 +175,12 @@ const DroneInspectie = () => {
             {stappen.map((s, i) => (
               <div key={i} className="relative">
                 {i < stappen.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-blue-100 -translate-y-1/2 z-0" />
+                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-blue-100 dark:bg-blue-900 -translate-y-1/2 z-0" />
                 )}
                 <div className="pro-card p-8 relative z-10">
-                  <div className="text-5xl font-black text-blue-100 mb-4 leading-none">{s.nr}</div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">{s.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{s.desc}</p>
+                  <div className="text-5xl font-black text-blue-100 dark:text-blue-900 mb-4 leading-none">{s.nr}</div>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{s.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -208,14 +208,14 @@ const DroneInspectie = () => {
       </section>
 
       {/* ── Wat inbegrepen ── */}
-      <section className="section-shell bg-white">
+      <section className="section-shell bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Wat is inbegrepen?
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
                 Een drone-inspectie door Dakwerk Sterken is meer dan alleen een rondje vliegen.
                 U ontvangt een volledig inspectierapport met concrete aanbevelingen, zodat u weet
                 wat er nu, binnenkort, of later aandacht nodig heeft.
@@ -231,7 +231,7 @@ const DroneInspectie = () => {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-gray-700 dark:text-gray-300">{item}</span>
                   </li>
                 ))}
               </ul>

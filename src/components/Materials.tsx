@@ -59,12 +59,12 @@ const Materials = () => {
   ];
 
   return (
-    <section className="section-shell bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50 relative overflow-hidden">
+    <section className="section-shell bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
       {/* Bewegende achtergrond elementen */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-100 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-48 h-48 bg-orange-100 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-green-100 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-100 dark:bg-blue-900/20 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-48 h-48 bg-orange-100 dark:bg-orange-900/20 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-green-100 dark:bg-green-900/20 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative">
@@ -99,14 +99,14 @@ const Materials = () => {
               <div className="p-6">
                 <div className="grid md:grid-cols-3 gap-6">
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                    <h4 className="font-bold text-gray-900 dark:text-white mb-3 flex items-center">
                       <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
                       Specificaties
                     </h4>
                     <ul className="space-y-2">
                       {material.specifications.map((spec, idx) => (
-                        <li key={idx} className="text-sm text-gray-600 flex items-start">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                        <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 flex items-start">
+                          <div className="w-2 h-2 bg-gray-400 dark:bg-gray-500 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                           {spec}
                         </li>
                       ))}
@@ -114,14 +114,14 @@ const Materials = () => {
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                    <h4 className="font-bold text-gray-900 dark:text-white mb-3 flex items-center">
                       <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
                       Toepassingen
                     </h4>
                     <ul className="space-y-2">
                       {material.useCases.map((useCase, idx) => (
-                        <li key={idx} className="text-sm text-gray-600 flex items-start">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                        <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 flex items-start">
+                          <div className="w-2 h-2 bg-gray-400 dark:bg-gray-500 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                           {useCase}
                         </li>
                       ))}
@@ -129,14 +129,14 @@ const Materials = () => {
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                    <h4 className="font-bold text-gray-900 dark:text-white mb-3 flex items-center">
                       <CheckCircle className="h-5 w-5 text-orange-600 mr-2" />
                       Voordelen
                     </h4>
                     <ul className="space-y-2">
                       {material.advantages.map((advantage, idx) => (
-                        <li key={idx} className="text-sm text-gray-600 flex items-start">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                        <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 flex items-start">
+                          <div className="w-2 h-2 bg-gray-400 dark:bg-gray-500 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                           {advantage}
                         </li>
                       ))}
@@ -148,9 +148,9 @@ const Materials = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-white p-8 rounded-2xl shadow-lg text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Niet Zeker Welk Materiaal?</h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        <div className="mt-16 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Niet Zeker Welk Materiaal?</h3>
+          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
             Onze experts helpen u graag bij het kiezen van het juiste materiaal voor uw specifieke situatie. 
             Wij kijken naar uw budget, de dakconstructie, en uw wensen om de beste oplossing te vinden.
           </p>

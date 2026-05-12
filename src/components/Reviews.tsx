@@ -12,10 +12,9 @@ export default function Reviews() {
   }, []);
 
   return (
-    <section id="reviews" className="py-20 bg-gray-50">
+    <section id="reviews" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-6xl mx-auto px-4 text-center">
-
-        <p className="text-gray-600 mb-10">
+        <p className="text-gray-600 dark:text-gray-400 mb-10">
           Onze klanten beoordelen <span className="font-semibold text-primary">DAKWERK STERKEN</span> met trots dankzij kwaliteit, betrouwbaarheid en service.
         </p>
 

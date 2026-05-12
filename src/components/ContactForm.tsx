@@ -43,14 +43,11 @@ const ContactForm = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-6 text-gray-800"
-    >
-      <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+    <form onSubmit={handleSubmit} className="space-y-6 text-gray-800 dark:text-gray-200">
+      <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
         Stuur een bericht
       </h3>
-      <p className="text-sm text-gray-600 -mt-4 mb-4">
+      <p className="text-sm text-gray-600 dark:text-gray-400 -mt-4 mb-4">
         We reageren meestal binnen 24 uur.
       </p>
 
@@ -63,18 +60,18 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="peer w-full border border-gray-300 rounded-lg px-4 pt-5 pb-2 focus:outline-none focus:border-blue-800 transition"
+          className="peer w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg px-4 pt-5 pb-2 focus:outline-none focus:border-blue-800 dark:focus:border-blue-400 transition"
           placeholder=" "
         />
         <label
           htmlFor="name"
-          className="absolute text-gray-500 left-4 top-3 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-800"
+          className="absolute text-gray-500 dark:text-gray-400 left-4 top-3 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-800 dark:peer-focus:text-blue-400"
         >
           Naam
         </label>
       </div>
 
-      {/* E-mail veld */}
+      {/* Telefoon veld */}
       <div className="relative">
         <input
           type="tel"
@@ -82,12 +79,12 @@ const ContactForm = () => {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="peer w-full border border-gray-300 rounded-lg px-4 pt-5 pb-2 focus:outline-none focus:border-blue-800 transition"
+          className="peer w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg px-4 pt-5 pb-2 focus:outline-none focus:border-blue-800 dark:focus:border-blue-400 transition"
           placeholder=" "
         />
         <label
           htmlFor="phone"
-          className="absolute text-gray-500 left-4 top-3 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-800"
+          className="absolute text-gray-500 dark:text-gray-400 left-4 top-3 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-800 dark:peer-focus:text-blue-400"
         >
           Telefoonnummer (optioneel)
         </label>
@@ -102,12 +99,12 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="peer w-full border border-gray-300 rounded-lg px-4 pt-5 pb-2 focus:outline-none focus:border-blue-800 transition"
+          className="peer w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg px-4 pt-5 pb-2 focus:outline-none focus:border-blue-800 dark:focus:border-blue-400 transition"
           placeholder=" "
         />
         <label
           htmlFor="email"
-          className="absolute text-gray-500 left-4 top-3 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-800"
+          className="absolute text-gray-500 dark:text-gray-400 left-4 top-3 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-800 dark:peer-focus:text-blue-400"
         >
           E-mail
         </label>
@@ -122,12 +119,12 @@ const ContactForm = () => {
           onChange={handleChange}
           required
           rows={5}
-          className="peer w-full border border-gray-300 rounded-lg px-4 pt-5 pb-2 focus:outline-none focus:border-blue-800 transition resize-none"
+          className="peer w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg px-4 pt-5 pb-2 focus:outline-none focus:border-blue-800 dark:focus:border-blue-400 transition resize-none"
           placeholder=" "
         ></textarea>
         <label
           htmlFor="message"
-          className="absolute text-gray-500 left-4 top-3 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-800"
+          className="absolute text-gray-500 dark:text-gray-400 left-4 top-3 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-800 dark:peer-focus:text-blue-400"
         >
           Bericht
         </label>

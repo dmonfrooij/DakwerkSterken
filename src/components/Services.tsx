@@ -42,7 +42,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="section-shell bg-white">
+    <section id="services" className="section-shell bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4">
         <div className="section-header">
           <h2 className="section-title">Onze Diensten</h2>
@@ -54,15 +54,15 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="pro-card bg-gray-50 p-8">
-              <div className="text-blue-800 mb-4">
+            <div key={index} className="pro-card bg-gray-50 dark:bg-gray-800 p-8">
+              <div className="text-blue-800 dark:text-blue-400 mb-4">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{service.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">{service.description}</p>
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-sm text-gray-700">
+                  <li key={idx} className="flex items-center text-sm text-gray-700 dark:text-gray-300">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                     {feature}
                   </li>
