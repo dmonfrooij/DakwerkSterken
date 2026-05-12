@@ -1,4 +1,3 @@
-import React from "react";
 import { Phone, MessageCircle } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { trackEvent } from "../utils/analytics";

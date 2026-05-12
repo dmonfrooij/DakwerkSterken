@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Phone, Mail, Sun, Moon } from "lucide-react";
+import { Menu, X, Mail, Sun, Moon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { trackEvent } from "../utils/analytics";
 import { useTheme } from "../utils/useTheme";
@@ -56,10 +56,6 @@ const Header = () => {
               />
             </Link>
             <div className="hidden lg:flex items-center space-x-6 text-sm text-gray-600 dark:text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-blue-800 dark:text-blue-400" />
-                <span>06 13027782</span>
-              </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-800 dark:text-blue-400" />
                 <span>info@dakwerksterken.nl</span>
@@ -133,10 +129,6 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
             <div className="flex flex-col space-y-3 pt-4 pb-4 border-b border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-blue-800 dark:text-blue-400" />
-                <span>06 13027782</span>
-              </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-800 dark:text-blue-400" />
                 <span>info@dakwerksterken.nl</span>

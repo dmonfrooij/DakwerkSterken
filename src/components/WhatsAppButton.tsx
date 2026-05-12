@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { MessageCircle, Send, X } from "lucide-react";
 import { trackEvent } from "../utils/analytics";
 

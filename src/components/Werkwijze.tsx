@@ -1,4 +1,3 @@
-import React from "react";
 import { ClipboardList, MessageSquare, Hammer, ShieldCheck } from "lucide-react";
 
 const steps = [

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Shield, Award, CheckCircle } from 'lucide-react';
 import { trackEvent } from '../utils/analytics';
 
