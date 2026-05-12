@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Projects from "./components/Projects";
 import SeoLandingPage from "./components/SeoLandingPage";
+import DroneInspectie from "./components/DroneInspectie";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/projecten" element={<Projects />} />
         <Route path="/diensten/:slug" element={<SeoLandingPage mode="services" />} />
         <Route path="/regios/:slug" element={<SeoLandingPage mode="regions" />} />
+        <Route path="/drone-inspectie" element={<DroneInspectie />} />
       </Routes>
       <Footer />
       <WhatsAppButton />

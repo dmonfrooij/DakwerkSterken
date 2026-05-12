@@ -116,6 +116,18 @@ const Header = () => {
               Projecten
             </Link>
 
+            <Link
+              to="/drone-inspectie"
+              className={`font-medium transition-colors flex items-center gap-1 ${
+                location.pathname === "/drone-inspectie"
+                  ? "text-blue-800"
+                  : "text-gray-700 hover:text-blue-800"
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              🚁 Drone Inspectie
+            </Link>
+
             <button
               onClick={() => scrollToSection("contact")}
               className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors"
@@ -196,6 +208,18 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Projecten
+              </Link>
+
+              <Link
+                to="/drone-inspectie"
+                className={`font-medium text-left ${
+                  location.pathname === "/drone-inspectie"
+                    ? "text-blue-800"
+                    : "text-gray-700 hover:text-blue-800"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                🚁 Drone Inspectie
               </Link>
 
               <button

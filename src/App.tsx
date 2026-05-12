@@ -4,6 +4,7 @@ import Services from './components/Services';
 import Werkwijze from './components/Werkwijze';
 import Materials from './components/Materials';
 import Gallery from './components/Gallery';
+import DroneTeaser from './components/DroneTeaser';
 import Videos from './components/Videos';
 import Contact from './components/Contact';
 import Reviews from "./components/Reviews";
@@ -18,6 +19,7 @@ function App() {
           <Werkwijze />
           <Materials />
           <Gallery />
+          <DroneTeaser />
           <Videos />
           <Contact />
           <Reviews />
