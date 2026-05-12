@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { MessageCircle, Send, X } from "lucide-react";
 import { trackEvent } from "../utils/analytics";
 
@@ -45,7 +45,7 @@ const WhatsAppButton = () => {
   return (
     <div className="fixed bottom-20 right-4 z-50 md:bottom-8 md:right-8">
       {isOpen && (
-        <div className="w-[320px] max-w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl mb-3">
+        <div className="w-[320px] max-w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-2xl mb-3">
           <div className="flex items-center justify-between bg-[#25D366] px-4 py-3 text-white">
             <div>
               <p className="font-semibold leading-tight">Dakwerk Sterken</p>
@@ -61,8 +61,8 @@ const WhatsAppButton = () => {
             </button>
           </div>
 
-          <div className="bg-gray-50 p-4 space-y-3">
-            <div className="inline-block rounded-2xl rounded-tl-sm bg-white px-3 py-2 text-sm text-gray-700 shadow-sm">
+          <div className="bg-gray-50 dark:bg-gray-700 p-4 space-y-3">
+            <div className="inline-block rounded-2xl rounded-tl-sm bg-white dark:bg-gray-600 px-3 py-2 text-sm text-gray-700 dark:text-gray-200 shadow-sm">
               Hallo! Waar kunnen we u mee helpen?
             </div>
 
@@ -78,7 +78,7 @@ const WhatsAppButton = () => {
                       location: "chat_widget",
                     });
                   }}
-                  className="rounded-full border border-gray-300 bg-white px-3 py-1.5 text-xs text-gray-700 hover:border-green-500 hover:text-green-700 transition-colors"
+                  className="rounded-full border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-600 px-3 py-1.5 text-xs text-gray-700 dark:text-gray-200 hover:border-green-500 hover:text-green-700 transition-colors"
                 >
                   {reply}
                 </button>
@@ -89,7 +89,7 @@ const WhatsAppButton = () => {
               value={messageDraft}
               onChange={(e) => setMessageDraft(e.target.value)}
               rows={3}
-              className="w-full rounded-xl border border-gray-300 px-3 py-2 text-sm text-gray-800 focus:border-green-600 focus:outline-none"
+              className="w-full rounded-xl border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-600 px-3 py-2 text-sm text-gray-800 dark:text-gray-100 focus:border-green-600 focus:outline-none"
               placeholder="Typ hier uw bericht"
             />
 

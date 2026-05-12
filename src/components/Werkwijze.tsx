@@ -1,4 +1,3 @@
-import React from "react";
 import { ClipboardList, MessageSquare, Hammer, ShieldCheck } from "lucide-react";
 
 const steps = [
@@ -34,7 +33,7 @@ const steps = [
 
 const Werkwijze = () => {
   return (
-    <section className="section-shell bg-white">
+    <section className="section-shell bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4">
         <div className="section-header">
           <h2 className="section-title">Zo werken wij</h2>
@@ -48,18 +47,18 @@ const Werkwijze = () => {
             <div key={i} className="relative flex flex-col items-center text-center">
               {/* Connector line between steps (desktop) */}
               {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-[calc(50%+2.5rem)] w-[calc(100%-5rem)] h-px bg-blue-100 z-0" />
+                <div className="hidden lg:block absolute top-10 left-[calc(50%+2.5rem)] w-[calc(100%-5rem)] h-px bg-blue-100 dark:bg-blue-900 z-0" />
               )}
 
-              <div className="relative z-10 flex items-center justify-center w-20 h-20 rounded-full bg-blue-50 border-2 border-blue-100 mb-5">
+              <div className="relative z-10 flex items-center justify-center w-20 h-20 rounded-full bg-blue-50 dark:bg-blue-900/30 border-2 border-blue-100 dark:border-blue-800 mb-5">
                 {s.icon}
                 <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-bold flex items-center justify-center">
                   {s.step}
                 </span>
               </div>
 
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{s.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{s.description}</p>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{s.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{s.description}</p>
             </div>
           ))}
         </div>

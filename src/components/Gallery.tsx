@@ -54,7 +54,7 @@ const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="section-shell bg-gray-50">
+    <section id="gallery" className="section-shell bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4">
         <div className="section-header">
           <h2 className="section-title">Onze Projecten</h2>

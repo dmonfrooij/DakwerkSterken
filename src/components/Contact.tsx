@@ -1,10 +1,9 @@
-import React from "react";
 import { MapPin, Phone, Mail, Clock, Linkedin } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <section id="contact" className="section-shell bg-gradient-to-b from-gray-50 to-white">
+    <section id="contact" className="section-shell bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         {/* Titel en Intro */}
         <div className="section-header mb-16">
@@ -21,7 +20,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="pro-card p-10 rounded-3xl">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-8">
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8">
                 Onze Gegevens
               </h3>
 
@@ -42,7 +41,7 @@ const Contact = () => {
                     content: (
                       <a
                         href="tel:0613027782"
-                        className="text-blue-800 hover:text-blue-900 transition-colors"
+                        className="text-blue-800 dark:text-blue-400 hover:text-blue-900 transition-colors"
                       >
                         06 13027782
                       </a>
@@ -54,7 +53,7 @@ const Contact = () => {
                     content: (
                       <a
                         href="mailto:info@dakwerksterken.nl"
-                        className="text-blue-800 hover:text-blue-900 transition-colors"
+                        className="text-blue-800 dark:text-blue-400 hover:text-blue-900 transition-colors"
                       >
                         info@dakwerksterken.nl
                       </a>
@@ -64,7 +63,7 @@ const Contact = () => {
                     Icon: Clock,
                     title: "Werktijden",
                     content: (
-                      <div className="text-gray-600 space-y-1">
+                      <div className="text-gray-600 dark:text-gray-400 space-y-1">
                         <p>Ma - Vr: 07:00 - 18:00</p>
                         <p>Za: 08:00 - 16:00</p>
                         <p>Zo: Op afspraak</p>
@@ -79,7 +78,7 @@ const Contact = () => {
                         href="https://www.linkedin.com/in/leroy-sterken-0b6016192/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-800 hover:text-blue-900 transition-colors"
+                        className="text-blue-800 dark:text-blue-400 hover:text-blue-900 transition-colors"
                       >
                         Leroy Sterken
                       </a>
@@ -87,14 +86,14 @@ const Contact = () => {
                   },
                 ].map(({ Icon, title, content }, i) => (
                   <div key={i} className="flex items-start space-x-4">
-                    <div className="bg-blue-100 p-3 rounded-xl">
-                      <Icon className="h-6 w-6 text-blue-800" />
+                    <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-xl">
+                      <Icon className="h-6 w-6 text-blue-800 dark:text-blue-400" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
                         {title}
                       </h4>
-                      <div className="text-gray-600">{content}</div>
+                      <div className="text-gray-600 dark:text-gray-400">{content}</div>
                     </div>
                   </div>
                 ))}
@@ -125,7 +124,7 @@ const Contact = () => {
 
           {/* Contactformulier */}
           <div className="pro-card p-10 rounded-3xl">
-            <div className="mb-6 rounded-xl bg-blue-50 border border-blue-100 p-4 text-sm text-blue-900">
+            <div className="mb-6 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 p-4 text-sm text-blue-900 dark:text-blue-300">
               Vrijblijvend advies, snelle reactie en duidelijke prijsopgave zonder verrassingen.
             </div>
             <ContactForm />

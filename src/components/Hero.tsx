@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Shield, Award, CheckCircle } from 'lucide-react';
 import { trackEvent } from '../utils/analytics';
 
@@ -12,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+    <section id="home" className="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
       {/* Achtergrond afbeelding voor kunststof dak */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
@@ -24,11 +23,11 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
           <div>
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               Specialist in{' '}
-              <span className="text-blue-800">Kunststof Daken</span>
+              <span className="text-blue-800 dark:text-blue-400">Kunststof Daken</span>
             </h1>
-            <p className="text-xl text-black-600 mb-8 leading-relaxed">
+            <p className="text-xl text-black-600 dark:text-gray-300 mb-8 leading-relaxed">
               Dakwerk Sterken levert duurzame kunststof dakoplossingen voor woning en bedrijf.
               Vraag vandaag nog een vrijblijvende offerte aan en ontvang snel persoonlijk advies.
             </p>
@@ -36,19 +35,19 @@ const Hero = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-600" />
-                <span className="text-gray-700 font-medium">20+ Jaar Ervaring</span>
+                <span className="text-gray-700 dark:text-gray-300 font-medium">20+ Jaar Ervaring</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Shield className="h-6 w-6 text-blue-600" />
-                <span className="text-gray-700 font-medium">Volledig Verzekerd</span>
+                <span className="text-gray-700 dark:text-gray-300 font-medium">Volledig Verzekerd</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Award className="h-6 w-6 text-orange-600" />
-                <span className="text-gray-700 font-medium">Gecertificeerd</span>
+                <span className="text-gray-700 dark:text-gray-300 font-medium">Gecertificeerd</span>
               </div>
             </div>
 
-            <p className="text-sm text-gray-700 mb-6 font-medium">
+            <p className="text-sm text-gray-700 dark:text-gray-400 mb-6 font-medium">
               Reactie binnen 24 uur - Vrijblijvende offerte - Actief in heel Nederland
             </p>
 
@@ -69,7 +68,7 @@ const Hero = () => {
               </a>
               <button
                 onClick={() => scrollToSection('services')}
-                className="border-2 border-blue-800 text-blue-800 px-8 py-4 rounded-lg hover:bg-blue-800 hover:text-white transition-colors font-medium"
+                className="border-2 border-blue-800 dark:border-blue-400 text-blue-800 dark:text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-800 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-colors font-medium"
               >
                 Onze Diensten
               </button>
@@ -77,28 +76,28 @@ const Hero = () => {
           </div>
           
           <div className="lg:text-right">
-            <div className="bg-white p-8 rounded-2xl shadow-xl text-left">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Waarom Kiezen Voor Kunststof Daken?</h3>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl text-left">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Waarom Kiezen Voor Kunststof Daken?</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900 text-left">Duurzaam & Onderhoudsvrij</h4>
-                    <p className="text-gray-600 text-sm text-left">Kunststof daken gaan decennia mee met een bewezen duur van 40 jaar of langer</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-left">Duurzaam & Onderhoudsvrij</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm text-left">Kunststof daken gaan decennia mee met een bewezen duur van 40 jaar of langer</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900 text-left">Weerbestendig</h4>
-                    <p className="text-gray-600 text-sm text-left">Bestand tegen alle weersomstandigheden extreem goed bestand tegen UV straling</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-left">Weerbestendig</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm text-left">Bestand tegen alle weersomstandigheden extreem goed bestand tegen UV straling</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900 text-left">Kosteneffectief</h4>
-                    <p className="text-gray-600 text-sm text-left">Lagere kosten op lange termijn</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-left">Kosteneffectief</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm text-left">Lagere kosten op lange termijn</p>
                   </div>
                 </div>
               </div>

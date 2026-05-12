@@ -23,7 +23,7 @@ const Videos = () => {
   };
 
   return (
-    <section id="videos" className="section-shell bg-white">
+    <section id="videos" className="section-shell bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4">
         <div className="section-header">
           <h2 className="section-title">Video's</h2>
@@ -36,7 +36,7 @@ const Videos = () => {
           {videos.map((video, index) => (
             <div 
               key={index}
-              className="pro-card bg-gray-50 overflow-hidden cursor-pointer"
+              className="pro-card bg-gray-50 dark:bg-gray-800 overflow-hidden cursor-pointer"
               onClick={() => openVideo(video.url)}
             >
               <div className="aspect-video bg-gray-200 relative overflow-hidden">
@@ -56,9 +56,9 @@ const Videos = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{video.title}</h3>
-                <p className="text-gray-600 mb-3">{video.description}</p>
-                <div className="flex items-center text-blue-800 text-sm font-medium">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{video.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-3">{video.description}</p>
+                <div className="flex items-center text-blue-800 dark:text-blue-400 text-sm font-medium">
                   <ExternalLink className="h-4 w-4 mr-1" />
                   <span>Bekijk op YouTube</span>
                 </div>
@@ -67,9 +67,9 @@ const Videos = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-blue-50 p-8 rounded-2xl text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Meer Video's Bekijken?</h3>
-          <p className="text-gray-600 mb-6">
+        <div className="mt-16 bg-blue-50 dark:bg-blue-900/20 p-8 rounded-2xl text-center">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Meer Video's Bekijken?</h3>
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
             Bezoek ons YouTube kanaal voor meer tips en projectoverzichten.
           </p>
           <a 
